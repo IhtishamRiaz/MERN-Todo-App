@@ -32,11 +32,6 @@ const TodoList = () => {
         if (inputData !== '') {
             axios
                 .post(`${URL}/addTodo`, { text: inputData })
-                .then((data) => {
-                    console.log(data);
-                    getAllTodos()
-                    setInputData('');
-                })
         }
     }
     const deleteItem = (_id) => {
